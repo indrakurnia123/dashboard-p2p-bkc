@@ -9,7 +9,10 @@ use App\TransaksiKredit;
 
 class Detail extends Component
 {
-    protected $listeners = ['refreshComponent' => '$refresh'];
+    protected $listeners = [
+        'refreshComponent' => '$refresh',
+        'createJadwalAngsuran'
+    ];
     public $jadwalAngsuran=Array();
     public function mount($id)
     {
@@ -49,6 +52,7 @@ class Detail extends Component
 
         $this->emit('refreshComponent');
     }
+
     public function render()
     {
         return view('livewire.app.dashboard.p2p.data.detail')->extends('layouts.master');

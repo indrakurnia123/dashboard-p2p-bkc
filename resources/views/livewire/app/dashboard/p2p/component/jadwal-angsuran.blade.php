@@ -32,7 +32,7 @@
                               </tr>
                               @empty
                                 <tr>
-                                  <td colspan="7"><button class="btn btn-primary" wire:click.prevent="createJadwalAngsuran('{{$lending->no_factsheet}}')">Create Jadwal Angsuran</button></td>
+                                  <td colspan="7"><button class="btn btn-primary" wire:click.prevent="$emit('createJadwalAngsuran','{{$lending->no_factsheet}}')">Create Jadwal Angsuran</button></td>
                                 </tr>
                               @endforelse
                             </tbody>
